@@ -39,49 +39,17 @@
 #include <vector>
 #include <queue>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
-int maxHappiness(vector<int>& happiness, int k) {
-    priority_queue<int> maxHeap;
-    for (int h : happiness) {
-        maxHeap.push(h);
-    }
-
-    int totalHappiness = 0;
-    vector<int> selected;
-
-    while (k-- > 0 && !maxHeap.empty()) {
-        int maxHappy = maxHeap.top();
-        maxHeap.pop();
-        totalHappiness += maxHappy;
-        selected.push_back(maxHappy);
-        vector<int> temp;
-
-        while (!maxHeap.empty()) {
-            int h = maxHeap.top();
-            maxHeap.pop();
-            if (h > 1) {
-                temp.push_back(h - 1);
-            } else {
-                temp.push_back(0);
-            }
+long long maxHappiness(vector<int>& arr, int k) {
+  sort(arr.begin(),arr.end(),greater<int>());
+        long long int ans=0;
+        for(int i=0;i<k;i++){
+            if((arr[i]-i)>=0)ans+=(arr[i]-i);
         }
-
-        for (int h : temp) {
-            if (h > 0) {
-                maxHeap.push(h);
-            }
-        }
-    }
-
-    cout << "Selected values: ";
-    for (int value : selected) {
-        cout << value << " ";
-    }
-    cout << endl;
-
-    return totalHappiness;
+        return ans;
 }
 
 int main() {
@@ -94,35 +62,26 @@ int main() {
 
 // class Solution {
 // public:
-//     long long maximumHappinessSum(vector<int>& happiness, int k) {
-//              priority_queue<int> maxHeap;  
-//     for (int h : happiness) {
-//         maxHeap.push(h);  
-//     }
-
-//     int totalHappiness = 0;
-//     vector<int> selected;  
-//     while (k-- > 0 && !maxHeap.empty()) {
-//         int maxHappy = maxHeap.top();  
-//         maxHeap.pop();  
-//         totalHappiness += maxHappy;  
-//         selected.push_back(maxHappy);  
-//         vector<int> temp;  
-//         while (!maxHeap.empty()) {
-//             int h = maxHeap.top();
-//             maxHeap.pop();
-//             if (h > 1) {
-//                 temp.push_back(h - 1);
-//             } else {
-//                 temp.push_back(0);
-//             }
+//     long long maximumHappinessSum(vector<int>& arr, int k) {
+//         sort(arr.begin(),arr.end(),greater<int>());
+//         long long int ans=0;
+//         for(int i=0;i<k;i++){
+//             if((arr[i]-i)>=0)ans+=(arr[i]-i);
 //         }
-//         for (int h : temp) {
-//             if (h > 0) {
-//                 maxHeap.push(h);
-//             }
-//         }
-//     }
-//     return totalHappiness;
+//         return ans;
 //     }
 // };
+// 1. **Initialize a max heap**: This will be used to store the happiness values of the children. The max heap is chosen because it allows us to efficiently select the child with the highest happiness in each turn.
+
+// 2. **Populate the heap**: Iterate over the happiness array and push each happiness value into the max heap.
+
+// 3. **Initialize total happiness**: This variable will keep track of the total happiness of the selected children.
+
+// 4. **Selection of children**: Repeat the following steps until `k` children have been selected or the heap is empty:
+//     - **Select the happiest child**: Extract the maximum value from the heap (which represents the happiness of the happiest child) and add it to the total happiness.
+//     - **Decrease happiness**: Create a temporary array and populate it with the happiness values of the remaining children, each decreased by 1. Note that the happiness value cannot become less than 0.
+//     - **Update the heap**: Clear the heap and repopulate it with the updated happiness values from the temporary array.
+
+// 5. **Return the total happiness**: After `k` children have been selected, the total happiness variable holds the maximum sum of happiness that can be achieved.
+ 
+// This algorithm ensures that in each turn, the child with the highest happiness is always selected, and the happiness of the remaining children is correctly decreased. It has a time complexity of O(n log n) due to the use of a heap, where n is the number of children. The space complexity is also O(n) for storing the happiness values in the heap. 
