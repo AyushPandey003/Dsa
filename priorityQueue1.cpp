@@ -59,6 +59,13 @@ int main() {
     return 0;
 }
 
+// Function Definition: The function maxHappiness is defined which takes a vector of integers arr and an integer k as input. The vector arr represents the happiness values and k is the number of elements to be selected from arr.
+// Sorting: The vector arr is sorted in descending order using the sort function from the <algorithm> library. This is done so that the highest values are at the beginning of the vector.
+// Initialization: A variable ans of type long long int is initialized to 0. This variable is used to store the sum of the maximum k elements in arr.
+// Loop: A for loop is run from i = 0 to i = k-1. In each iteration, it checks if the value of the ith element in arr minus i is greater than or equal to 0. If it is, it adds the value of arr[i] - i to ans.
+// Return: The function returns the value of ans, which is the maximum sum of happiness that can be obtained by selecting k elements from arr.
+// Main Function: In the main function, a vector happiness is defined with values {1, 2, 3} and k is set to 2. The maxHappiness function is then called with happiness and k as arguments, and its return value is printed to the console.
+
 
 // class Solution {
 // public:
