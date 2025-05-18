@@ -1,5 +1,3 @@
-Here's a complete **README-style explanation** for your `validAnagram` function, with equivalent implementations in **Python**, **Java**, and **C++**, based on the same logic: using a **character frequency count**.
-
 ---
 
 ## 🔍 Anagram Validator — Python | Java | C++
