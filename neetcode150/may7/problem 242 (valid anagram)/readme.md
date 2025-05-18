@@ -122,4 +122,3 @@ int main() {
 
 ---
 
-Let me know if you’d like the README in Markdown format or want to include this in a GitHub repo!
