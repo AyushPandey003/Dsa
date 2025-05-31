@@ -29,5 +29,3 @@ def solution(arr):
                 right -= 1  
     
     return result
-k = solution([-1, 0, 1, 2, -1, -4])
-print(k)

@@ -17,7 +17,6 @@ vector<vector<int>> threeSumExactTriplets(vector<int>& nums, int target) {
             int sum = nums[i] + nums[left] + nums[right];
             if (sum == target) {
                 triplets.push_back({nums[i], nums[left], nums[right]});
-                // Skip duplicates
                 while (left < right && nums[left] == nums[left+1]) left++;
                 while (left < right && nums[right] == nums[right-1]) right--;
                 left++;

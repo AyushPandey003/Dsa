@@ -53,6 +53,8 @@ def solution(nums, target, k):
     nums.sort()
     return k_sum_recursive(nums, target, k)
 
-print(solution([-1, 0, 1, 2, -1, -4], 0, 3))
+from dis import dis
+
+print(dis(solution))
 
 

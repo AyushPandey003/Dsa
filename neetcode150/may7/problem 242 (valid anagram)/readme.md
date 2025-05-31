@@ -41,7 +41,7 @@ def validAnagram(s1, s2):
 # Example
 s1 = "anagram"
 s2 = "nagaram"
-print(validAnagram(s1, s2))  # Output: True
+print(validAnagram(s1, s2))  
 ```
 
 ---
