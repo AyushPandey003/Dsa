@@ -22,3 +22,16 @@ public class Solution{
         System.out.println("Longest Happy Prefix: " + solution.LongestHappyPrefix(s));
     }
 }
+
+
+// class Main{
+//     public static void main(String args[]){
+//         int var1=5;
+//         int var2=10;
+//         if ((var2==10) && (var1==5)) {
+//             System.out.println("Both conditions are true");
+//         } else {
+//             System.out.println("At least one condition is false");
+//         }
+//     }
+// }
