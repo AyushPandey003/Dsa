@@ -53,9 +53,9 @@ Each problem has its own README file that provides:
 
 Explore the subfolders to find problems categorized by themes or difficulty levels. Some examples include:
 
-- [NeetCode 150](./neetcode%20150)
-- [Father's Day](./fathers%20day)
-- [Mother's Day](./mothers%20day)
+- [NeetCode 150](./neetcode150)
+- [Father's Day](./fathersday)
+- [Mother's Day](./mothersday)
 
 ## Contributions
 
