@@ -53,14 +53,17 @@ Each problem has its own README file that provides:
 
 Explore the subfolders to find problems categorized by themes or difficulty levels. Some examples include:
 
-- [NeetCode 150](./neetcode150)
 - [Father's Day](./fathersDay)
 - [Mother's Day](./mothersDay)
-
-## Contributions
-
-Contributions are welcome! If you have a better solution or want to add a new problem, feel free to submit a pull request.
+These READMEs are designed to help you not only understand the code but also improve your problem-solving skills.
 
 ---
 
-Thank you for visiting this repository. Happy coding and best of luck with your DSA preparation!
+## Contributions
+
+Contributions are welcome! If you have an optimized solution, a new problem to add, or any improvements, please submit a pull request. If you encountered an amazing question in an interview, feel free to contribute it to help others prepare. Let's build this resource together!
+
+---
+
+Thank you for visiting the DSA Preparation Repository. Happy coding and good luck with your DSA journey!
+
